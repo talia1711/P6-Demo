@@ -1,0 +1,60 @@
+* {
+    font-family: Comic sans-serif;
+}
+
+
+.logo{
+    
+}
+
+
+.green-btn {
+    background-color: #469388;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+
+.green-btn-2 {
+    background-color: #469388;
+    color: white;
+    padding: 5px 40px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+
+.red-btn {
+    background-color:red;
+    color: white;
+    padding: 5px 40px;
+    border: none;
+}
+
+
+.section-center {
+    text-align: center;
+}
+
+
+.vertical-spacing-top {
+    margin-top: 40px;
+}
+
+
+.list-bookmarks {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.book-card {
+    background-color: antiquewhite;
+    border-style: solid;
+    max-width: 300px;
+}
