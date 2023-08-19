@@ -1,64 +1,90 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Title</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="logo section-center">
-        <img src="logo.png" width="200" height="300"> 
-
+      <img src="logo.png" width="200" height="300" />
     </div>
-        
 
     <div class="section-center">
-        <p>New Book</p>
-        <button type="button" class="green-btn" onclick="newBook">Add a Book</button>
-
+      <p>New Book</p>
+      <button type="button" class="green-btn pointer" onclick="newBook()">
+        Add a Book
+      </button>
     </div>
 
-
-    <div class="section-center">
-        <p>New Book</p>
-        <form action="#">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" value=""><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
-            <input type="submit" value="Submit" class="green-btn-2">
-            <br>
-            <input type="submit" value="Cancel" class="red-btn">
-          </form> 
+    <div id="search-form" class="section-center hidden">
+      <p>New Book</p>
+      <form onSubmit="handleSubmit()" class="section-form">
+        <label for="fname">Title:</label><br />
+        <input type="text" id="title" name="title" value="" /><br />
+        <label for="lname">Author:</label><br />
+        <input type="text" id="author" name="author" value="" /><br /><br />
+        <input type="submit" value="Submit" class="green-btn-2 pointer" />
+        <br />
+        <button type="button"  class="red-btn pointer"  onclick="cancel()">Cancel</button>
+      </form>
     </div>
-
-
-
 
     <div class="vertical-spacing-top section-center">
-        <p>My Bookmarks</p>
-        <div class="list-bookmarks">
-            <div class="book-card">
-            <p> <b>Title:</b> Who moved my cheese</p>
-            <p> <b>Id:</b> 007</p>
-            <p> <b>Author:</b> Dr Spencer Johnson</p>
-            <p> <b>Description:</b>: Bestselling work and motivational business fable</p>
-            <img src="Book.jpg" width="200px" height="200px" alt="">
-             </div>
-
-        
-            <div class="book-card">
-            <p> <b>Title:</b> Who moved my cheese</p>
-            <p> <b>Id:</b> 007</p>
-            <p> <b>Author:</b> Dr Spencer Johnson</p>
-            <p> <b>Description:</b>: Bestselling work and motivational business fable</p>
-            <img src="Book.jpg" width="200px" height="200px" alt="">
-            </div>
-
+        <p>Search Results</p>
+        <div id="list-results" class="list-results">
+          <div class="book-card">
+            <p><b>Title:</b> Who moved my cheese</p>
+            <p><b>Id:</b> 007</p>
+            <p><b>Author:</b> Dr Spencer Johnson</p>
+            <p>
+              <b>Description:</b>: Bestselling work and motivational business fable
+            </p>
+            <img src="Book.jpg" width="200px" height="200px" alt="" />
+          </div>
+  
+          <div class="book-card">
+            <p><b>Title:</b> Who moved my cheese</p>
+            <p><b>Id:</b> 007</p>
+            <p><b>Author:</b> Dr Spencer Johnson</p>
+            <p>
+              <b>Description:</b>: Bestselling work and motivational business
+              fable
+            </p>
+            <img src="Book.jpg" width="200px" height="200px" alt="" />
+          </div>
         </div>
     </div>
-        <script src="main.js"></script>
-</body>
+
+    <div class="vertical-spacing-top section-center">
+      <p>My Bookmarks</p>
+      <div id="list-bookmarks" class="list-bookmarks">
+        <div class="book-card">
+          <p><b>Title:</b> Who moved my cheese</p>
+          <p><b>Id:</b> 007</p>
+          <p><b>Author:</b> Dr Spencer Johnson</p>
+          <p>
+            <b>Description:</b>: Bestselling work and motivational business
+            fable
+          </p>
+          <img src="Book.jpg" width="200px" height="200px" alt="" />
+        </div>
+
+        <div class="book-card">
+          <p><b>Title:</b> Who moved my cheese</p>
+          <p><b>Id:</b> 007</p>
+          <p><b>Author:</b> Dr Spencer Johnson</p>
+          <p>
+            <b>Description:</b>: Bestselling work and motivational business
+            fable
+          </p>
+          <img src="Book.jpg" width="200px" height="200px" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>

@@ -13,6 +13,11 @@
     color: white;
     padding: 10px 20px;
     border: none;
+    
+}
+
+.pointer{
+    cursor: pointer;
 }
 
 
@@ -57,4 +62,8 @@
     background-color: antiquewhite;
     border-style: solid;
     max-width: 300px;
+}
+
+.hidden {
+    display: none;
 }
