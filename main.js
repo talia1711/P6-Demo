@@ -3,15 +3,19 @@ let title = document.getElementById('title');
 let author = document.getElementById('author');
 
 function newBook(event) {
-    console.log ('new book was clicked');
-    searchForm.style.display ='block';
+    //searchForm.style.display ='block';
+    window.location.replace("search.html");
 }
+
+
+
 
 function handleSubmit(event) {
     console.log ('handleSubmit');
     console.log ('title ', title.textContent);
-    fetch('').then((result)=>{
+    fetch('https://www.googleapis.com/books/v1/volumes?q=inauthor:talia&intitle=star+wars&key=AIzaSyAtMwLNihpdJaRUGogPtWvTk9v_fxomd9E').then((result)=>{
         //loop on the result of books and add to the html
+        console.log('result', result);
 
 
     }).catch( (error)=>{} );

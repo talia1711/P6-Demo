@@ -13,11 +13,18 @@
       <img src="logo.png" width="200" height="300" />
     </div>
 
-    <div class="section-center">
+
+    <div id="search-form" class="section-center">
       <p>New Book</p>
-      <button type="button" class="green-btn pointer" onclick="newBook()">
-        Add a Book
-      </button>
+      <form class="section-form" action="results.html">
+        <label for="fname">Title:</label><br />
+        <input type="text" id="title" name="title" value="" /><br />
+        <label for="lname">Author:</label><br />
+        <input type="text" id="author" name="author" value="" /><br /><br />
+        <input type="submit" value="Submit" class="green-btn-2 pointer" />
+        <br />
+        <button type="button"  class="red-btn pointer"  onclick="cancel()">Cancel</button>
+      </form>
     </div>
 
     <div class="vertical-spacing-top section-center">
