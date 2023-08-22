@@ -67,3 +67,11 @@
 .hidden {
     display: none;
 }
+
+.bookmark{
+    color:#469388;
+    font-size:20px;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 10px;
+}
