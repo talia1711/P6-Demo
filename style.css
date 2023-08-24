@@ -1,4 +1,4 @@
-* {
+*, body {
     font-family: Comic sans-serif;
 }
 
@@ -74,4 +74,8 @@
     text-align: right;
     margin-right: 20px;
     margin-top: 10px;
+}
+
+.added {
+    color:red;
 }
