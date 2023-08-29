@@ -22,6 +22,7 @@ function addRemoveBookmark(event){
     console.log('the button was clicked', event);
     let bookCardElement = event.target.closest('.book-card');
 
+    //book metadata
     let id = bookCardElement.getAttribute('id');
     let title = bookCardElement.getAttribute('title');
     let description = bookCardElement.getAttribute('description');
@@ -31,17 +32,26 @@ function addRemoveBookmark(event){
     console.log('bookCardElement', event.target.closest('.book-card'));
     
     //session storage
-    let favs = JSON.parse(sessionStorage.getItem("bookmark")) || [];
-    //check if that is already on the storage, if yes, remove it, make the icon green, if not, add it and make the icon red
-    let book = favs.find((element)=>element.id==id);
+    let favs = JSON.parse(sessionStorage.getItem("bookmark"))|| [];
 
-    if(book) {
-        favs.splice(favs.findIndex(book),1);
+
+
+
+    console.log('favs: ', favs);
+    //check if that is already on the storage, if yes, remove it, make the icon green, if not, add it and make the icon red
+    let bookIndex;
+    let book = favs.filter((element, index)=>{ bookIndex=index; return element.id==id;});
+    console.log('book: ', book);
+    if(book && bookIndex) {
+        console.log('book is available on ss');
+        favs.splice(bookIndex,1);
         event.target.parentElement.className = 'bookmark';
     }else {
+    console.log('book is ! available on ss');
        favs.push({
             id, title, description, image, author
         });
+        console.log('favs after add: ', favs);
         event.target.parentElement.className = 'bookmark added'; 
     }
 
