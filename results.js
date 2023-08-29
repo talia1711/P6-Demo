@@ -40,9 +40,10 @@ function addRemoveBookmark(event){
     console.log('favs: ', favs);
     //check if that is already on the storage, if yes, remove it, make the icon green, if not, add it and make the icon red
     let bookIndex;
-    let book = favs.filter((element, index)=>{ bookIndex=index; return element.id==id;});
+    let book = favs.find((element)=>element.id==id);
     console.log('book: ', book);
-    if(book && bookIndex) {
+    if(book) {
+        favs.filter((element, index)=>{ bookIndex=index; return element.id==id;});
         console.log('book is available on ss');
         favs.splice(bookIndex,1);
         event.target.parentElement.className = 'bookmark';
