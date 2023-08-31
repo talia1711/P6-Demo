@@ -60,7 +60,7 @@ function addRemoveBookmark(event){
     
 }
 
-fetch(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${params.get('title')}&intitle=${params.get('author')}&key=AIzaSyAtMwLNihpdJaRUGogPtWvTk9v_fxomd9E`)
+fetch(`https://www.googleapis.com/books/v1/volumes?q=inauthor:${params.get('title')}&intitle=${params.get('author')}`)
     .then((result)=>{
     //loop on the result of books and add to the html
     console.log('result', result);
