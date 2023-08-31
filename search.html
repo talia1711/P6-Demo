@@ -13,22 +13,21 @@
     <div class="logo section-center">
       <img src="logo.png" width="200" height="300" alt="logo"/>
     </div>
-
-
     <div id="search-form" class="section-center">
-      <p>New Book</p>
+      <div class="green-bg">New Book</div>
       <form class="section-form" action="results.html">
-        <label for="title">Title:</label><br />
-        <input type="text" id="title" name="title" value="" /><br />
-        <label for="author">Author:</label><br />
-        <input type="text" id="author" name="author" value="" /><br /><br />
-        <input type="submit" value="Submit" class="green-btn-2 pointer" />
-        <br />
-        <button type="button"  class="red-btn pointer"  onclick="cancel()">Cancel</button>
+        <div class="form-layout">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="" />
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" value="" />
+            <div>
+                <input type="submit" value="Submit" class="green-btn-2 pointer" />
+                <button type="button"  class="red-btn pointer"  onclick="cancel()">Cancel</button>
+            </div>
+        </div>
       </form>
     </div>
-
-    
     <script src="main.js"></script>
   </body>
 </html>

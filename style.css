@@ -8,6 +8,8 @@
 }
 
 
+
+
 .green-btn {
     background-color: #469388;
     color: white;
@@ -40,6 +42,7 @@
 
 .section-center {
     text-align: center;
+    font-family: Comic sans-serif;
 }
 
 
@@ -78,4 +81,31 @@
 
 .added {
     color:red;
+}
+
+
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px;
+}
+
+.green-bg {
+    background-color: #469388;
+    color:white;
+    margin: 15px;
+    border-radius: 35px;
+}
+
+
+/*desktop*/
+
+@media screen and (min-width: 720px) {
+    .form-layout {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin: 15px;
+    }
 }
